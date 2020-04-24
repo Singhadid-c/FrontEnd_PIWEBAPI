@@ -7,6 +7,9 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { DashboardComponent } from './components/content/dashboard/dashboard.component';
+import { ChartsModule } from 'ng2-charts';
+import { LineChartComponent } from './components/content/chart/line-chart/line-chart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { DashboardComponent } from './components/content/dashboard/dashboard.com
     HeaderComponent,
     MenuComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
